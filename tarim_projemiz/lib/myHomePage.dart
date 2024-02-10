@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'build_button.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'colors.dart';
+import 'login_screen.dart';
 import 'newPage1.dart';
 import 'newPage2.dart';
 import 'newPage3.dart';
@@ -96,14 +97,21 @@ class _MyHomePageState extends State<MyHomePage> {
                       scrollDirection: Axis.horizontal,
                       child: Row(
                         children: [
-                          buildButton(Icons.login, "Login"),
-                          buildButton(Icons.school, "Learn"),
-                          buildButton(Icons.star, "Colection"),
-                          buildButton(Icons.report_problem, "Report"),
-                          buildButton(Icons.account_balance_outlined, "Haberler",),
-                          buildButton(Icons.data_exploration, "Jj"),
+                          buildButton(Icons.login, "Login", () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
+                          }),
+                          buildButton(Icons.school, "Learn", () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
+                          }),
+                          buildButton(Icons.star, "Collection", () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
+                          }),
+                          buildButton(Icons.sailing_sharp, "Sailing", () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
+                          }),
                         ],
-                      ),
+                      )
+                      ,
                     ),
                     SizedBox(height: 15),
                     Expanded(
