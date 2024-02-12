@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:local_events/learn_screen.dart';
 import 'build_button.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'colors.dart';
@@ -101,7 +102,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
                           }),
                           buildButton(Icons.school, "Learn", () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => LearnScreen()));
                           }),
                           buildButton(Icons.star, "Collection", () {
                             Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
@@ -156,7 +157,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
                             child: Container(
                               width: 350,
-                              height: 250,
+                              height: 300,
                               margin: EdgeInsets.symmetric(vertical: 20),
                               decoration: BoxDecoration(
                                 color: Colors.white,
