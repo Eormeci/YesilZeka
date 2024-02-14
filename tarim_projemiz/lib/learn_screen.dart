@@ -67,7 +67,8 @@ class _LearnScreen extends State<LearnScreen> {
   }
 
   //TODO face detection code here
-  late List<DetectedObject> objects;
+  late List<DetectedObject> objects = [];
+
   doObjectDetection() async {
     InputImage inputImage = InputImage.fromFile(_image!);
     objects = await objectDetector.processImage(inputImage);
@@ -96,35 +97,40 @@ class _LearnScreen extends State<LearnScreen> {
     });
   }
 
+
+
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    return MaterialApp(
-      home: Scaffold(
-          appBar: AppBar(
-            title: Text('Geri Dön ..'),
-            backgroundColor: bg,
-          ),
-          body: Container(
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage('images/bg.jpg'), fit: BoxFit.cover),
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text('Geri Dön ..'),
+          backgroundColor: bg,
+        ),
+        body: Container(
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('images/bg.jpg'),
+              fit: BoxFit.cover,
             ),
-            child: Column(
-              children: [
-                const SizedBox(
-                  width: 100,
-                ),
-                Container(
-                  margin: const EdgeInsets.only(top: 100),
-                  child: Stack(children: <Widget>[
+          ),
+          child: Column(
+            children: [
+              const SizedBox(
+                width: 100,
+              ),
+              Container(
+                margin: const EdgeInsets.only(top: 100),
+                child: Stack(
+                  children: <Widget>[
                     Center(
                       child: ElevatedButton(
                         onPressed: _imgFromGallery,
                         onLongPress: _imgFromCamera,
                         style: ElevatedButton.styleFrom(
-                            primary: Colors.transparent,
-                            shadowColor: Colors.transparent),
+                          primary: Colors.transparent,
+                          shadowColor: Colors.transparent,
+                        ),
                         child: Container(
                           width: 350,
                           height: 350,
@@ -139,7 +145,9 @@ class _LearnScreen extends State<LearnScreen> {
                                 height: image.width.toDouble(),
                                 child: CustomPaint(
                                   painter: ObjectPainter(
-                                      objectList: objects, imageFile: image),
+                                    objectList: objects,
+                                    imageFile: image,
+                                  ),
                                 ),
                               ),
                             ),
@@ -150,20 +158,39 @@ class _LearnScreen extends State<LearnScreen> {
                             height: 350,
                             child: const Icon(
                               Icons.camera_alt,
-                              color: Colors.black,size: 53
-                              ,
+                              color: Colors.black,
+                              size: 53,
                             ),
                           ),
                         ),
                       ),
                     ),
-                  ]),
+                  ],
                 ),
-              ],
-            ),
-          )),
+              ),
+              // SizedBox(height: 20), // Resim ve metin arasına boşluk ekleyebilirsiniz
+              // Resmin altında etiketleri göster
+              Column(
+                children: objects.map((DetectedObject rectangle) {
+                  var list = rectangle.labels;
+                  return Column(
+                    children: list.map((Label label) {
+                      return Text(
+                        "${label.text}   ${label.confidence.toStringAsFixed(2)}",
+                        style: TextStyle(fontSize: 30, color: Colors.white),
+                      );
+                    }).toList(),
+                  );
+                }).toList(),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
+
+
 }
 
 class ObjectPainter extends CustomPainter {

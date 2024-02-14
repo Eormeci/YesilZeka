@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:local_events/colors.dart';
+import 'package:local_events/kayit_ol.dart';
+import 'package:local_events/sifrenimi_unuttun.dart';
 
 class LoginScreen extends StatelessWidget {
   final TextEditingController _usernameController = TextEditingController();
@@ -49,7 +51,7 @@ class LoginScreen extends StatelessWidget {
             SizedBox(height: 16.0),
             TextButton(
               onPressed: () {
-                // Şifreni mi unuttun? işlemleri
+                Navigator.push(context, MaterialPageRoute(builder: (context) => SifrenimiUnuttun()));
                 print("Şifreni mi unuttun?");
               },
               child: Text("Şifreni mi unuttun?", style: TextStyle(color: Colors.blue)),
@@ -57,6 +59,7 @@ class LoginScreen extends StatelessWidget {
             TextButton(
               onPressed: () {
                 // Kayıt ol işlemleri
+                Navigator.push(context, MaterialPageRoute(builder: (context) => KayitOl()));
                 print("Kayıt Ol");
               },
               child: Text("Kayıt Ol", style: TextStyle(color: Colors.blue)),
