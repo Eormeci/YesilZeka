@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:local_events/learn_screen.dart';
 import 'build_button.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'collection_screen.dart';
 import 'colors.dart';
+import 'learn_screen.dart';
 import 'login_screen.dart';
 import 'newPage1.dart';
 import 'newPage2.dart';
@@ -105,7 +106,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             Navigator.push(context, MaterialPageRoute(builder: (context) => LearnScreen()));
                           }),
                           buildButton(Icons.star, "Collection", () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => CollectionScreen()));
                           }),
                           buildButton(Icons.sailing_sharp, "Sailing", () {
                             Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
@@ -154,7 +155,6 @@ class _MyHomePageState extends State<MyHomePage> {
                                   break;
                               }
                             },
-
                             child: Container(
                               width: 350,
                               height: 300,
