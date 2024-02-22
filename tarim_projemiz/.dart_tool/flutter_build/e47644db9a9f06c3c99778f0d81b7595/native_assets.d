@@ -1,0 +1,1 @@
+ C:\\Users\\ormec\\AndroidStudioProjects\\tarim_projemiz\\.dart_tool\\flutter_build\\e47644db9a9f06c3c99778f0d81b7595\\native_assets.yaml: 

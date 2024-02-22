@@ -1,0 +1,344 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.local_events"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="33" />
+10    <!--
+11         The INTERNET permission is required for development. Specifically,
+12         the Flutter tool needs it to communicate with the running application
+13         to allow setting breakpoints, to provide hot reload, etc.
+14    -->
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->C:\Users\ormec\AndroidStudioProjects\tarim_projemiz\android\app\src\main\AndroidManifest.xml:5:5-67
+15-->C:\Users\ormec\AndroidStudioProjects\tarim_projemiz\android\app\src\main\AndroidManifest.xml:5:22-64
+16    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+16-->C:\Users\ormec\AndroidStudioProjects\tarim_projemiz\android\app\src\main\AndroidManifest.xml:6:5-78
+16-->C:\Users\ormec\AndroidStudioProjects\tarim_projemiz\android\app\src\main\AndroidManifest.xml:6:22-75
+17    <uses-permission android:name="android.permission.WAKE_LOCK" />
+17-->C:\Users\ormec\AndroidStudioProjects\tarim_projemiz\android\app\src\main\AndroidManifest.xml:7:5-68
+17-->C:\Users\ormec\AndroidStudioProjects\tarim_projemiz\android\app\src\main\AndroidManifest.xml:7:22-65
+18    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+18-->C:\Users\ormec\AndroidStudioProjects\tarim_projemiz\android\app\src\main\AndroidManifest.xml:8:5-81
+18-->C:\Users\ormec\AndroidStudioProjects\tarim_projemiz\android\app\src\main\AndroidManifest.xml:8:22-78
+19    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+19-->C:\Users\ormec\AndroidStudioProjects\tarim_projemiz\android\app\src\main\AndroidManifest.xml:9:5-80
+19-->C:\Users\ormec\AndroidStudioProjects\tarim_projemiz\android\app\src\main\AndroidManifest.xml:9:22-77
+20    <uses-permission android:name="com.google.android.apps.photos.permission.GOOGLE_PHOTOS" /> <!-- For remote config -->
+20-->C:\Users\ormec\AndroidStudioProjects\tarim_projemiz\android\app\src\main\AndroidManifest.xml:10:5-95
+20-->C:\Users\ormec\AndroidStudioProjects\tarim_projemiz\android\app\src\main\AndroidManifest.xml:10:22-92
+21    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+21-->[com.google.mlkit:object-detection:17.0.0] C:\Users\ormec\.gradle\caches\transforms-3\4976516fe9fd1979cca5346b787622b7\transformed\jetified-object-detection-17.0.0\AndroidManifest.xml:7:5-79
+21-->[com.google.mlkit:object-detection:17.0.0] C:\Users\ormec\.gradle\caches\transforms-3\4976516fe9fd1979cca5346b787622b7\transformed\jetified-object-detection-17.0.0\AndroidManifest.xml:7:22-76
+22    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+22-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\ormec\.gradle\caches\transforms-3\7fb6464c1ecd7dab439b5ea65454a49b\transformed\jetified-firebase-iid-20.1.5\AndroidManifest.xml:26:5-82
+22-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\ormec\.gradle\caches\transforms-3\7fb6464c1ecd7dab439b5ea65454a49b\transformed\jetified-firebase-iid-20.1.5\AndroidManifest.xml:26:22-79
+23
+24    <permission
+24-->[androidx.core:core:1.10.1] C:\Users\ormec\.gradle\caches\transforms-3\c4988ff80110f75080a936fc6f044848\transformed\core-1.10.1\AndroidManifest.xml:22:5-24:47
+25        android:name="com.example.local_events.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+25-->[androidx.core:core:1.10.1] C:\Users\ormec\.gradle\caches\transforms-3\c4988ff80110f75080a936fc6f044848\transformed\core-1.10.1\AndroidManifest.xml:23:9-81
+26        android:protectionLevel="signature" />
+26-->[androidx.core:core:1.10.1] C:\Users\ormec\.gradle\caches\transforms-3\c4988ff80110f75080a936fc6f044848\transformed\core-1.10.1\AndroidManifest.xml:24:9-44
+27
+28    <uses-permission android:name="com.example.local_events.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+28-->[androidx.core:core:1.10.1] C:\Users\ormec\.gradle\caches\transforms-3\c4988ff80110f75080a936fc6f044848\transformed\core-1.10.1\AndroidManifest.xml:26:5-97
+28-->[androidx.core:core:1.10.1] C:\Users\ormec\.gradle\caches\transforms-3\c4988ff80110f75080a936fc6f044848\transformed\core-1.10.1\AndroidManifest.xml:26:22-94
+29
+30    <application
+31        android:name="android.app.Application"
+32        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+32-->[androidx.core:core:1.10.1] C:\Users\ormec\.gradle\caches\transforms-3\c4988ff80110f75080a936fc6f044848\transformed\core-1.10.1\AndroidManifest.xml:28:18-86
+33        android:debuggable="true"
+34        android:icon="@mipmap/ic_launcher"
+35        android:label="local_events"
+36        android:usesCleartextTraffic="true" >
+37
+38        <!-- Diğer application öğeleri -->
+39
+40        <activity
+41            android:name="com.example.local_events.MainActivity"
+42            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+43            android:exported="true"
+44            android:hardwareAccelerated="true"
+45            android:launchMode="singleTop"
+46            android:requestLegacyExternalStorage="true"
+47            android:theme="@style/LaunchTheme"
+48            android:windowSoftInputMode="adjustResize" >
+49
+50            <!-- Diğer activity öğeleri -->
+51
+52            <meta-data
+53                android:name="io.flutter.embedding.android.NormalTheme"
+54                android:resource="@style/NormalTheme" />
+55
+56            <intent-filter>
+57                <action android:name="android.intent.action.MAIN" />
+58
+59                <category android:name="android.intent.category.LAUNCHER" />
+60            </intent-filter>
+61        </activity>
+62
+63        <!-- Diğer application öğeleri -->
+64
+65        <meta-data
+66            android:name="flutterEmbedding"
+67            android:value="2" />
+68
+69        <provider
+69-->[:image_picker_android] C:\Users\ormec\AndroidStudioProjects\tarim_projemiz\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-18:20
+70            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+70-->[:image_picker_android] C:\Users\ormec\AndroidStudioProjects\tarim_projemiz\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-82
+71            android:authorities="com.example.local_events.flutter.image_provider"
+71-->[:image_picker_android] C:\Users\ormec\AndroidStudioProjects\tarim_projemiz\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-74
+72            android:exported="false"
+72-->[:image_picker_android] C:\Users\ormec\AndroidStudioProjects\tarim_projemiz\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-37
+73            android:grantUriPermissions="true" >
+73-->[:image_picker_android] C:\Users\ormec\AndroidStudioProjects\tarim_projemiz\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-47
+74            <meta-data
+74-->[:image_picker_android] C:\Users\ormec\AndroidStudioProjects\tarim_projemiz\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-17:75
+75                android:name="android.support.FILE_PROVIDER_PATHS"
+75-->[:image_picker_android] C:\Users\ormec\AndroidStudioProjects\tarim_projemiz\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:16:17-67
+76                android:resource="@xml/flutter_image_picker_file_paths" />
+76-->[:image_picker_android] C:\Users\ormec\AndroidStudioProjects\tarim_projemiz\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:17:17-72
+77        </provider>
+78
+79        <activity
+79-->[:url_launcher_android] C:\Users\ormec\AndroidStudioProjects\tarim_projemiz\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-13:74
+80            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+80-->[:url_launcher_android] C:\Users\ormec\AndroidStudioProjects\tarim_projemiz\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-74
+81            android:exported="false"
+81-->[:url_launcher_android] C:\Users\ormec\AndroidStudioProjects\tarim_projemiz\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-37
+82            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+82-->[:url_launcher_android] C:\Users\ormec\AndroidStudioProjects\tarim_projemiz\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-71
+83
+84        <service
+84-->[com.google.mlkit:object-detection:17.0.0] C:\Users\ormec\.gradle\caches\transforms-3\4976516fe9fd1979cca5346b787622b7\transformed\jetified-object-detection-17.0.0\AndroidManifest.xml:11:9-17:19
+85            android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService"
+85-->[com.google.mlkit:object-detection:17.0.0] C:\Users\ormec\.gradle\caches\transforms-3\4976516fe9fd1979cca5346b787622b7\transformed\jetified-object-detection-17.0.0\AndroidManifest.xml:12:13-91
+86            android:directBootAware="true"
+86-->[com.google.mlkit:common:18.6.0] C:\Users\ormec\.gradle\caches\transforms-3\acf40e695d83c341e35bbc6a7720a314\transformed\jetified-common-18.6.0\AndroidManifest.xml:17:13-43
+87            android:exported="false" >
+87-->[com.google.mlkit:object-detection:17.0.0] C:\Users\ormec\.gradle\caches\transforms-3\4976516fe9fd1979cca5346b787622b7\transformed\jetified-object-detection-17.0.0\AndroidManifest.xml:13:13-37
+88            <meta-data
+88-->[com.google.mlkit:object-detection:17.0.0] C:\Users\ormec\.gradle\caches\transforms-3\4976516fe9fd1979cca5346b787622b7\transformed\jetified-object-detection-17.0.0\AndroidManifest.xml:14:13-16:85
+89                android:name="com.google.firebase.components:com.google.mlkit.vision.objects.defaults.internal.DefaultObjectsRegistrar"
+89-->[com.google.mlkit:object-detection:17.0.0] C:\Users\ormec\.gradle\caches\transforms-3\4976516fe9fd1979cca5346b787622b7\transformed\jetified-object-detection-17.0.0\AndroidManifest.xml:15:17-136
+90                android:value="com.google.firebase.components.ComponentRegistrar" />
+90-->[com.google.mlkit:object-detection:17.0.0] C:\Users\ormec\.gradle\caches\transforms-3\4976516fe9fd1979cca5346b787622b7\transformed\jetified-object-detection-17.0.0\AndroidManifest.xml:16:17-82
+91            <meta-data
+91-->[com.google.mlkit:object-detection-custom:17.0.0] C:\Users\ormec\.gradle\caches\transforms-3\14cd4c870a2536d1d9099b4b4787542a\transformed\jetified-object-detection-custom-17.0.0\AndroidManifest.xml:11:13-13:85
+92                android:name="com.google.firebase.components:com.google.mlkit.vision.objects.custom.internal.CustomObjectsRegistrar"
+92-->[com.google.mlkit:object-detection-custom:17.0.0] C:\Users\ormec\.gradle\caches\transforms-3\14cd4c870a2536d1d9099b4b4787542a\transformed\jetified-object-detection-custom-17.0.0\AndroidManifest.xml:12:17-133
+93                android:value="com.google.firebase.components.ComponentRegistrar" />
+93-->[com.google.mlkit:object-detection-custom:17.0.0] C:\Users\ormec\.gradle\caches\transforms-3\14cd4c870a2536d1d9099b4b4787542a\transformed\jetified-object-detection-custom-17.0.0\AndroidManifest.xml:13:17-82
+94            <meta-data
+94-->[com.google.mlkit:vision-internal-vkp:18.2.2] C:\Users\ormec\.gradle\caches\transforms-3\5eaf7267ad1bd78997ccfde32018e533\transformed\jetified-vision-internal-vkp-18.2.2\AndroidManifest.xml:14:13-16:85
+95                android:name="com.google.firebase.components:com.google.mlkit.vision.vkp.VkpRegistrar"
+95-->[com.google.mlkit:vision-internal-vkp:18.2.2] C:\Users\ormec\.gradle\caches\transforms-3\5eaf7267ad1bd78997ccfde32018e533\transformed\jetified-vision-internal-vkp-18.2.2\AndroidManifest.xml:15:17-103
+96                android:value="com.google.firebase.components.ComponentRegistrar" />
+96-->[com.google.mlkit:vision-internal-vkp:18.2.2] C:\Users\ormec\.gradle\caches\transforms-3\5eaf7267ad1bd78997ccfde32018e533\transformed\jetified-vision-internal-vkp-18.2.2\AndroidManifest.xml:16:17-82
+97            <meta-data
+97-->[com.google.mlkit:vision-common:17.3.0] C:\Users\ormec\.gradle\caches\transforms-3\66bd106c250be9f02190d447f7a4703c\transformed\jetified-vision-common-17.3.0\AndroidManifest.xml:12:13-14:85
+98                android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar"
+98-->[com.google.mlkit:vision-common:17.3.0] C:\Users\ormec\.gradle\caches\transforms-3\66bd106c250be9f02190d447f7a4703c\transformed\jetified-vision-common-17.3.0\AndroidManifest.xml:13:17-124
+99                android:value="com.google.firebase.components.ComponentRegistrar" />
+99-->[com.google.mlkit:vision-common:17.3.0] C:\Users\ormec\.gradle\caches\transforms-3\66bd106c250be9f02190d447f7a4703c\transformed\jetified-vision-common-17.3.0\AndroidManifest.xml:14:17-82
+100            <meta-data
+100-->[com.google.mlkit:linkfirebase:17.0.0] C:\Users\ormec\.gradle\caches\transforms-3\3e7da156e9200b986b3326fc299b06ad\transformed\jetified-linkfirebase-17.0.0\AndroidManifest.xml:12:13-14:85
+101                android:name="com.google.firebase.components:com.google.mlkit.linkfirebase.internal.LinkFirebaseComponentRegistrar"
+101-->[com.google.mlkit:linkfirebase:17.0.0] C:\Users\ormec\.gradle\caches\transforms-3\3e7da156e9200b986b3326fc299b06ad\transformed\jetified-linkfirebase-17.0.0\AndroidManifest.xml:13:17-132
+102                android:value="com.google.firebase.components.ComponentRegistrar" />
+102-->[com.google.mlkit:linkfirebase:17.0.0] C:\Users\ormec\.gradle\caches\transforms-3\3e7da156e9200b986b3326fc299b06ad\transformed\jetified-linkfirebase-17.0.0\AndroidManifest.xml:14:17-82
+103            <meta-data
+103-->[com.google.mlkit:common:18.6.0] C:\Users\ormec\.gradle\caches\transforms-3\acf40e695d83c341e35bbc6a7720a314\transformed\jetified-common-18.6.0\AndroidManifest.xml:20:13-22:85
+104                android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar"
+104-->[com.google.mlkit:common:18.6.0] C:\Users\ormec\.gradle\caches\transforms-3\acf40e695d83c341e35bbc6a7720a314\transformed\jetified-common-18.6.0\AndroidManifest.xml:21:17-120
+105                android:value="com.google.firebase.components.ComponentRegistrar" />
+105-->[com.google.mlkit:common:18.6.0] C:\Users\ormec\.gradle\caches\transforms-3\acf40e695d83c341e35bbc6a7720a314\transformed\jetified-common-18.6.0\AndroidManifest.xml:22:17-82
+106        </service>
+107
+108        <provider
+108-->[com.google.mlkit:common:18.6.0] C:\Users\ormec\.gradle\caches\transforms-3\acf40e695d83c341e35bbc6a7720a314\transformed\jetified-common-18.6.0\AndroidManifest.xml:9:9-13:38
+109            android:name="com.google.mlkit.common.internal.MlKitInitProvider"
+109-->[com.google.mlkit:common:18.6.0] C:\Users\ormec\.gradle\caches\transforms-3\acf40e695d83c341e35bbc6a7720a314\transformed\jetified-common-18.6.0\AndroidManifest.xml:10:13-78
+110            android:authorities="com.example.local_events.mlkitinitprovider"
+110-->[com.google.mlkit:common:18.6.0] C:\Users\ormec\.gradle\caches\transforms-3\acf40e695d83c341e35bbc6a7720a314\transformed\jetified-common-18.6.0\AndroidManifest.xml:11:13-69
+111            android:exported="false"
+111-->[com.google.mlkit:common:18.6.0] C:\Users\ormec\.gradle\caches\transforms-3\acf40e695d83c341e35bbc6a7720a314\transformed\jetified-common-18.6.0\AndroidManifest.xml:12:13-37
+112            android:initOrder="99" />
+112-->[com.google.mlkit:common:18.6.0] C:\Users\ormec\.gradle\caches\transforms-3\acf40e695d83c341e35bbc6a7720a314\transformed\jetified-common-18.6.0\AndroidManifest.xml:13:13-35
+113
+114        <service
+114-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\ormec\.gradle\caches\transforms-3\7fb6464c1ecd7dab439b5ea65454a49b\transformed\jetified-firebase-iid-20.1.5\AndroidManifest.xml:29:9-35:19
+115            android:name="com.google.firebase.components.ComponentDiscoveryService"
+115-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\ormec\.gradle\caches\transforms-3\7fb6464c1ecd7dab439b5ea65454a49b\transformed\jetified-firebase-iid-20.1.5\AndroidManifest.xml:30:13-84
+116            android:directBootAware="true"
+116-->[com.google.firebase:firebase-common:19.3.0] C:\Users\ormec\.gradle\caches\transforms-3\eba20b59deb4b781168682b38d236667\transformed\jetified-firebase-common-19.3.0\AndroidManifest.xml:34:13-43
+117            android:exported="false" >
+117-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\ormec\.gradle\caches\transforms-3\7fb6464c1ecd7dab439b5ea65454a49b\transformed\jetified-firebase-iid-20.1.5\AndroidManifest.xml:31:13-37
+118            <meta-data
+118-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\ormec\.gradle\caches\transforms-3\7fb6464c1ecd7dab439b5ea65454a49b\transformed\jetified-firebase-iid-20.1.5\AndroidManifest.xml:32:13-34:85
+119                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+119-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\ormec\.gradle\caches\transforms-3\7fb6464c1ecd7dab439b5ea65454a49b\transformed\jetified-firebase-iid-20.1.5\AndroidManifest.xml:33:17-96
+120                android:value="com.google.firebase.components.ComponentRegistrar" />
+120-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\ormec\.gradle\caches\transforms-3\7fb6464c1ecd7dab439b5ea65454a49b\transformed\jetified-firebase-iid-20.1.5\AndroidManifest.xml:34:17-82
+121            <meta-data
+121-->[com.google.firebase:firebase-installations:16.2.1] C:\Users\ormec\.gradle\caches\transforms-3\6633f1fd1f48628f4cf65ed9a8fd947d\transformed\jetified-firebase-installations-16.2.1\AndroidManifest.xml:17:13-19:85
+122                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+122-->[com.google.firebase:firebase-installations:16.2.1] C:\Users\ormec\.gradle\caches\transforms-3\6633f1fd1f48628f4cf65ed9a8fd947d\transformed\jetified-firebase-installations-16.2.1\AndroidManifest.xml:18:17-127
+123                android:value="com.google.firebase.components.ComponentRegistrar" />
+123-->[com.google.firebase:firebase-installations:16.2.1] C:\Users\ormec\.gradle\caches\transforms-3\6633f1fd1f48628f4cf65ed9a8fd947d\transformed\jetified-firebase-installations-16.2.1\AndroidManifest.xml:19:17-82
+124        </service>
+125
+126        <receiver
+126-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\ormec\.gradle\caches\transforms-3\7fb6464c1ecd7dab439b5ea65454a49b\transformed\jetified-firebase-iid-20.1.5\AndroidManifest.xml:37:9-44:20
+127            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+127-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\ormec\.gradle\caches\transforms-3\7fb6464c1ecd7dab439b5ea65454a49b\transformed\jetified-firebase-iid-20.1.5\AndroidManifest.xml:38:13-78
+128            android:exported="true"
+128-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\ormec\.gradle\caches\transforms-3\7fb6464c1ecd7dab439b5ea65454a49b\transformed\jetified-firebase-iid-20.1.5\AndroidManifest.xml:39:13-36
+129            android:permission="com.google.android.c2dm.permission.SEND" >
+129-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\ormec\.gradle\caches\transforms-3\7fb6464c1ecd7dab439b5ea65454a49b\transformed\jetified-firebase-iid-20.1.5\AndroidManifest.xml:40:13-73
+130            <intent-filter>
+130-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\ormec\.gradle\caches\transforms-3\7fb6464c1ecd7dab439b5ea65454a49b\transformed\jetified-firebase-iid-20.1.5\AndroidManifest.xml:41:13-43:29
+131                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+131-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\ormec\.gradle\caches\transforms-3\7fb6464c1ecd7dab439b5ea65454a49b\transformed\jetified-firebase-iid-20.1.5\AndroidManifest.xml:42:17-81
+131-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\ormec\.gradle\caches\transforms-3\7fb6464c1ecd7dab439b5ea65454a49b\transformed\jetified-firebase-iid-20.1.5\AndroidManifest.xml:42:25-78
+132            </intent-filter>
+133        </receiver>
+134
+135        <activity
+135-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\ormec\.gradle\caches\transforms-3\781e5567158e59d38ee2b89930f9808b\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
+136            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+136-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\ormec\.gradle\caches\transforms-3\781e5567158e59d38ee2b89930f9808b\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:19-85
+137            android:exported="false"
+137-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\ormec\.gradle\caches\transforms-3\781e5567158e59d38ee2b89930f9808b\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:22:19-43
+138            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+138-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\ormec\.gradle\caches\transforms-3\781e5567158e59d38ee2b89930f9808b\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:21:19-78
+139
+140        <provider
+140-->[com.google.firebase:firebase-common:19.3.0] C:\Users\ormec\.gradle\caches\transforms-3\eba20b59deb4b781168682b38d236667\transformed\jetified-firebase-common-19.3.0\AndroidManifest.xml:26:9-30:39
+141            android:name="com.google.firebase.provider.FirebaseInitProvider"
+141-->[com.google.firebase:firebase-common:19.3.0] C:\Users\ormec\.gradle\caches\transforms-3\eba20b59deb4b781168682b38d236667\transformed\jetified-firebase-common-19.3.0\AndroidManifest.xml:27:13-77
+142            android:authorities="com.example.local_events.firebaseinitprovider"
+142-->[com.google.firebase:firebase-common:19.3.0] C:\Users\ormec\.gradle\caches\transforms-3\eba20b59deb4b781168682b38d236667\transformed\jetified-firebase-common-19.3.0\AndroidManifest.xml:28:13-72
+143            android:exported="false"
+143-->[com.google.firebase:firebase-common:19.3.0] C:\Users\ormec\.gradle\caches\transforms-3\eba20b59deb4b781168682b38d236667\transformed\jetified-firebase-common-19.3.0\AndroidManifest.xml:29:13-37
+144            android:initOrder="100" />
+144-->[com.google.firebase:firebase-common:19.3.0] C:\Users\ormec\.gradle\caches\transforms-3\eba20b59deb4b781168682b38d236667\transformed\jetified-firebase-common-19.3.0\AndroidManifest.xml:30:13-36
+145
+146        <meta-data
+146-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\ormec\.gradle\caches\transforms-3\58aa1384bde170d075503b845cfcf44c\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+147            android:name="com.google.android.gms.version"
+147-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\ormec\.gradle\caches\transforms-3\58aa1384bde170d075503b845cfcf44c\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+148            android:value="@integer/google_play_services_version" />
+148-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\ormec\.gradle\caches\transforms-3\58aa1384bde170d075503b845cfcf44c\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+149
+150        <uses-library
+150-->[androidx.window:window:1.0.0-beta04] C:\Users\ormec\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+151            android:name="androidx.window.extensions"
+151-->[androidx.window:window:1.0.0-beta04] C:\Users\ormec\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+152            android:required="false" />
+152-->[androidx.window:window:1.0.0-beta04] C:\Users\ormec\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+153        <uses-library
+153-->[androidx.window:window:1.0.0-beta04] C:\Users\ormec\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+154            android:name="androidx.window.sidecar"
+154-->[androidx.window:window:1.0.0-beta04] C:\Users\ormec\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+155            android:required="false" />
+155-->[androidx.window:window:1.0.0-beta04] C:\Users\ormec\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+156
+157        <provider
+157-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\ormec\.gradle\caches\transforms-3\34e3313412f6bb2343705c93422b49a8\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:24:9-32:20
+158            android:name="androidx.startup.InitializationProvider"
+158-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\ormec\.gradle\caches\transforms-3\34e3313412f6bb2343705c93422b49a8\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:25:13-67
+159            android:authorities="com.example.local_events.androidx-startup"
+159-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\ormec\.gradle\caches\transforms-3\34e3313412f6bb2343705c93422b49a8\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:26:13-68
+160            android:exported="false" >
+160-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\ormec\.gradle\caches\transforms-3\34e3313412f6bb2343705c93422b49a8\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:27:13-37
+161            <meta-data
+161-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\ormec\.gradle\caches\transforms-3\34e3313412f6bb2343705c93422b49a8\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:29:13-31:52
+162                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+162-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\ormec\.gradle\caches\transforms-3\34e3313412f6bb2343705c93422b49a8\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:30:17-78
+163                android:value="androidx.startup" />
+163-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\ormec\.gradle\caches\transforms-3\34e3313412f6bb2343705c93422b49a8\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:31:17-49
+164            <meta-data
+164-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ormec\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+165                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+165-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ormec\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+166                android:value="androidx.startup" />
+166-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ormec\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+167        </provider>
+168
+169        <receiver
+169-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ormec\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+170            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+170-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ormec\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+171            android:directBootAware="false"
+171-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ormec\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+172            android:enabled="true"
+172-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ormec\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+173            android:exported="true"
+173-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ormec\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+174            android:permission="android.permission.DUMP" >
+174-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ormec\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+175            <intent-filter>
+175-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ormec\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+176                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+176-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ormec\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+176-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ormec\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+177            </intent-filter>
+178            <intent-filter>
+178-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ormec\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+179                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+179-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ormec\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+179-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ormec\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+180            </intent-filter>
+181            <intent-filter>
+181-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ormec\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+182                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+182-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ormec\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+182-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ormec\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+183            </intent-filter>
+184            <intent-filter>
+184-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ormec\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+185                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+185-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ormec\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+185-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ormec\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+186            </intent-filter>
+187        </receiver>
+188
+189        <service
+189-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\ormec\.gradle\caches\transforms-3\865800f069935b874f356d17af4d45b6\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:29:9-35:19
+190            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+190-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\ormec\.gradle\caches\transforms-3\865800f069935b874f356d17af4d45b6\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:30:13-103
+191            android:exported="false" >
+191-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\ormec\.gradle\caches\transforms-3\865800f069935b874f356d17af4d45b6\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:31:13-37
+192            <meta-data
+192-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\ormec\.gradle\caches\transforms-3\865800f069935b874f356d17af4d45b6\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:32:13-34:39
+193                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+193-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\ormec\.gradle\caches\transforms-3\865800f069935b874f356d17af4d45b6\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:33:17-94
+194                android:value="cct" />
+194-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\ormec\.gradle\caches\transforms-3\865800f069935b874f356d17af4d45b6\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:34:17-36
+195        </service>
+196        <service
+196-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\ormec\.gradle\caches\transforms-3\8a86750eba43ba46ae6e646b43a84835\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:26:9-30:19
+197            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+197-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\ormec\.gradle\caches\transforms-3\8a86750eba43ba46ae6e646b43a84835\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:27:13-117
+198            android:exported="false"
+198-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\ormec\.gradle\caches\transforms-3\8a86750eba43ba46ae6e646b43a84835\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:28:13-37
+199            android:permission="android.permission.BIND_JOB_SERVICE" >
+199-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\ormec\.gradle\caches\transforms-3\8a86750eba43ba46ae6e646b43a84835\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:29:13-69
+200        </service>
+201
+202        <receiver
+202-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\ormec\.gradle\caches\transforms-3\8a86750eba43ba46ae6e646b43a84835\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:32:9-34:40
+203            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+203-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\ormec\.gradle\caches\transforms-3\8a86750eba43ba46ae6e646b43a84835\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:33:13-132
+204            android:exported="false" />
+204-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\ormec\.gradle\caches\transforms-3\8a86750eba43ba46ae6e646b43a84835\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:34:13-37
+205    </application>
+206
+207</manifest>

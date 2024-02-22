@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 Widget buildButton(IconData icon, String label, VoidCallback onPressed) {
   return Container(
@@ -10,11 +11,10 @@ Widget buildButton(IconData icon, String label, VoidCallback onPressed) {
       borderRadius: BorderRadius.circular(15),
       color: Colors.white,
     ),
-
     child: Column(
       children: [
         IconButton(
-          icon: Icon(icon, size: 30),
+          icon: FaIcon(icon, size: 30),
           onPressed: onPressed,
         ),
         Text(

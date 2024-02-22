@@ -8,7 +8,6 @@ import 'package:flutter/services.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 
-
 class LearnScreen extends StatefulWidget {
   LearnScreen({Key? key}) : super(key: key);
   @override
@@ -16,7 +15,6 @@ class LearnScreen extends StatefulWidget {
 }
 
 class _LearnScreen extends State<LearnScreen> {
-
   late ImagePicker imagePicker;
   File? _image;
   String result = '';
@@ -31,6 +29,7 @@ class _LearnScreen extends State<LearnScreen> {
     imagePicker = ImagePicker();
     //TODO initialize detector
     createObjectDetector();
+
   }
 
   @override
@@ -58,15 +57,12 @@ class _LearnScreen extends State<LearnScreen> {
     }
   }
 
-  Future<String> _getModel(String assetPath) async {
-    if (Platform.isAndroid) {
-      return 'flutter_assets/$assetPath';
-    }
-    final path = '${(await getApplicationSupportDirectory()).path}/$assetPath';
+  Future<String> getModelPath(String asset) async {
+    final path = '${(await getApplicationSupportDirectory()).path}/$asset';
     await Directory(dirname(path)).create(recursive: true);
     final file = File(path);
     if (!await file.exists()) {
-      final byteData = await rootBundle.load(assetPath);
+      final byteData = await rootBundle.load(asset);
       await file.writeAsBytes(byteData.buffer
           .asUint8List(byteData.offsetInBytes, byteData.lengthInBytes));
     }
@@ -74,15 +70,17 @@ class _LearnScreen extends State<LearnScreen> {
   }
 
   createObjectDetector() async {
-    final modelPath = await _getModel('ml/mobilenet.tflite');
+    final modelPath = await getModelPath('machine_learning/mobilenet.tflite');
     final options = LocalObjectDetectorOptions(
-        modelPath: modelPath,
-        classifyObjects: true,
-        multipleObjects: true,
-        mode: DetectionMode.single
+      mode: DetectionMode.single,
+      modelPath: modelPath,
+      classifyObjects: true,
+      multipleObjects: true,
     );
     objectDetector = ObjectDetector(options: options);
+
   }
+
 
   //TODO face detection code here
   doObjectDetection() async {
@@ -102,7 +100,6 @@ class _LearnScreen extends State<LearnScreen> {
       result;
     });
   }
-
 
 
 

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'build_button.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'collection_screen.dart';
@@ -9,6 +10,7 @@ import 'login_screen.dart';
 import 'newPage1.dart';
 import 'newPage2.dart';
 import 'newPage3.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 
 class MyHomePage extends StatefulWidget {
@@ -74,9 +76,35 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                         ),
                         SizedBox(width: 5),
-                        Icon(Icons.facebook),
-                        Icon(Icons.mail),
-                        Icon(Icons.safety_check)
+                        GestureDetector(
+                          onTap: () {
+                            _launchURL('https://www.facebook.com');
+                          },
+                          child: FaIcon(
+                            FontAwesomeIcons.facebook,
+                            color: Colors.blue,
+                            size: 30,
+                          ),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            _launchURL('https://www.facebook.com');
+                          },
+                          child: FaIcon(
+                            FontAwesomeIcons.instagram,
+                            color: Colors.pinkAccent,
+                            size: 30,
+                          ),
+                        ),GestureDetector(
+                          onTap: () {
+                            _launchURL('https://www.facebook.com');
+                          },
+                          child: FaIcon(
+                            FontAwesomeIcons.youtube,
+                            color: Colors.red,
+                            size: 30,
+                          ),
+                        ),
                       ],
                     ),
                     SizedBox(height: 10),
@@ -99,16 +127,16 @@ class _MyHomePageState extends State<MyHomePage> {
                       scrollDirection: Axis.horizontal,
                       child: Row(
                         children: [
-                          buildButton(Icons.login, "Login", () {
+                          buildButton(FontAwesomeIcons.arrowRightFromBracket, "Login", () {
                             Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
                           }),
-                          buildButton(Icons.school, "Learn", () {
+                          buildButton(FontAwesomeIcons.graduationCap, "Learn", () {
                             Navigator.push(context, MaterialPageRoute(builder: (context) => LearnScreen()));
                           }),
-                          buildButton(Icons.star, "Collection", () {
+                          buildButton(FontAwesomeIcons.star, "Collection", () {
                             Navigator.push(context, MaterialPageRoute(builder: (context) => CollectionScreen()));
                           }),
-                          buildButton(Icons.sailing_sharp, "Sailing", () {
+                          buildButton(FontAwesomeIcons.sailboat, "Sailing", () {
                             Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
                           }),
                         ],
@@ -226,3 +254,8 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+Future<void> _launchURL(String url) async {
+    await launchUrl(Uri.parse(url));
+}
+
